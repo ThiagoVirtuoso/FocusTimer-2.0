@@ -3,13 +3,6 @@ import Controls from "./controls.js"
 
 const sounds = Sounds()
 
-const getSound = {
-    'forest': sounds.forest,
-    'rain': sounds.rain,
-    'coffee_shop': sounds.coffee_shop,
-    'fireplace': sounds.fireplace
-}
-
 export default function(timer, playButton, pauseButton, stopButton, plusButton, minusButton, soundButtons) {
     for (const soundButton of soundButtons) {
         soundButton.onclick  = () => {
