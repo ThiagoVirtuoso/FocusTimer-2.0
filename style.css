@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color: #FFFFFF;
+    --button-bg-color-dark: #02799D;
+    --button-bg-color-light: #E1E1E6;
+    --content-color-dark: #323238;
+    --content-color-light: #FFFFFF;
+
+}
+
+body {
+    display: flex;
+    background-color: var(--bg-color);
+    color: var(--content-color-dark);
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+}
+
+#timer {
+    max-width: 32.1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(6.3rem, 6.3rem + 10vw, 12.6rem);
+    margin-right: clamp(9.6rem, 9.6rem + 5vw, 19.2rem);
+}
+
+#time {
+    display: flex;
+}
+
+#controls {
+    display: flex;
+    gap: 4.0rem;
+    margin-top: 1.7rem;
+}
+
+#controls button {
+    max-width: 4.8rem;
+    max-height: 4.8rem;
+}
+
+#controls button, #sounds button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background 500ms, transform 200ms;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button svg path {
+    fill: var(--content-color-dark);
+}
+
+#sounds {
+    max-width: 30.8rem;
+    max-height: 33.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+}
+
+#sounds button {
+    width: clamp(6.9rem, 6.9rem + 10vw, 13.8rem);
+    height: clamp(7.6rem, 7.6rem + 10vw, 15.2rem);
+    border-radius: 2.4rem;
+    background-color: var(--button-bg-color-light);
+}
+
+#sounds button:hover {
+    background-color: lightblue;
+}
+
+#sounds button svg {
+    width: clamp(2.8rem, 2.8rem + 5vw, 5.6rem);
+    height: clamp(2.8rem, 2.8rem + 5vw, 5.6rem);
+}
+
+#sounds button.playing {
+    background-color: var(--button-bg-color-dark);
+}
+
+button.playing svg path {
+    fill: var(--content-color-light);
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 845px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #timer {
+        margin-right: 0;
+        margin-bottom: 10.2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #controls button {
+        max-width: clamp(2.4rem, 2.4rem + 2vw, 4.8rem);
+        max-height: clamp(2.4rem, 2.4rem + 2vw, 4.8rem);
+    }
+
+    #sounds {
+        display: grid;
+    }
+}
