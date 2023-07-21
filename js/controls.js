@@ -1,4 +1,14 @@
 import { playButton, pauseButton } from "./elements.js"
+import Sounds from "./sounds.js"
+
+const sounds = Sounds()
+
+const getSound = {
+    'forest': sounds.forest,
+    'rain': sounds.rain,
+    'coffee_shop': sounds.coffee_shop,
+    'fireplace': sounds.fireplace
+}
 
 export default function() {
     function toggleControls() {
